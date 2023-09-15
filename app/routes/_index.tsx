@@ -86,41 +86,6 @@ let setup = {
   ],
   totalRecords: 0,
 };
-const DEFAULT_DATA = {
-  data: [
-    // {
-    //   id: 1,
-    //   name: "a",
-    //   age: 29,
-    //   qualification: "B.Com",
-    //   rating: 3,
-    //   gender: "male",
-    //   city: "Kerala",
-    //   skills: ["reactjs", "angular", "vuejs"],
-    // },
-    // {
-    //   id: 2,
-    //   name: "b",
-    //   age: 35,
-    //   qualification: "B.Sc",
-    //   rating: 5,
-    //   gender: "female",
-    //   city: "Mumbai",
-    //   skills: ["reactjs", "angular"],
-    // },
-    // {
-    //   id: 3,
-    //   name: "c",
-    //   age: 42,
-    //   qualification: "B.E",
-    //   rating: 3,
-    //   gender: "female",
-    //   city: "Bangalore",
-    //   skills: ["reactjs"],
-    // },
-  ],
-  current: {},
-};
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -262,6 +227,8 @@ export default function Index() {
           enabled: true,
           sortCol: state.sort.sortCol,
           sortOrder: state.sort.sortOrder,
+          sortByKey: "_sort",
+          sortOrderKey: "_order",
         }}
         width="100%"
         headers={state.headers}

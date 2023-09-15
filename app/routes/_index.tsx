@@ -128,6 +128,11 @@ export default function Index() {
     // fetchData(0, state.pageLength);
   }, []);
 
+
+  useEffect(() => {
+    console.log(`PageLength changed to ${state.pageLength}`);
+  }, [state.pageLength]);
+
   const fetchData = async (start, limit) => {
     // let data = await fetchDataOnly(1);
     // setState({
@@ -159,6 +164,7 @@ export default function Index() {
   // }, [state.pageLength, state.sort]);
 
   const onPageLengthChange = (pageLength) => {
+    console.log(`state:update: pageLength changed to ${pageLength}`);
     setState({
       ...state,
       pageLength,
@@ -240,7 +246,7 @@ export default function Index() {
           enabled: true,
           pageLength: state.pageLength, //for server side keep in state
           type: "long", // long, short
-          onChangePage: fetchDataOnly,
+          onPageLengthChange: onPageLengthChange,
           startQueryKey: "_page",
           limitQueryKey: "_limit",
         }}

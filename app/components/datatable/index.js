@@ -399,6 +399,7 @@ function DataTable(props) {
   };
 
   const onPageLengthChange = async (pageLength) => {
+    // alert(`DataTable: Pagelength chaged to ${pageLength}`);
     pageLength = parseInt(pageLength, 10);
     let pages =
       Math.ceil(state.totalRecords / pageLength) ||

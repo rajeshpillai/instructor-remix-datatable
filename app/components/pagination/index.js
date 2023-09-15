@@ -26,14 +26,10 @@ export default function Pagination(props) {
     }
   }, [props]);
 
-  // const onPageLengthChange = () => {
-  //   props.onPageLengthChange(pageLengthInput.current.value);
-  // };
 
   const onKeyUp = (e) => {
-    // alert(e.which == 13);
-    // console.log(e.key);
     if (e.which == 13 || e.key == "Enter") {
+      // alert(`Pagination: Pagelength chaged to ${pageLengthInput.current.value}`);
       props.onPageLengthChange(pageLengthInput.current.value);
     }
   };

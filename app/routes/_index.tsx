@@ -5,6 +5,14 @@ import DataTable from "~/components/datatable";
 let setup = {
   headers: [
     {
+      title: "ID",
+      accessor: "id",
+      width: "300px",
+      index: 1,
+      dataType: "number",
+      controlType: "textarea",
+    },
+    {
       title: "Title",
       accessor: "title",
       width: "300px",

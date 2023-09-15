@@ -85,7 +85,7 @@ function DataTable(props) {
       }
       //If sorting is enabled then set sort column and sort order in API URL
       if (isSortEnabled) {
-        apiUrl += `&sort=${state.sortby}&order=${state.sort.sortOrder}`;
+        apiUrl += `&_sort=${state.sortby}&_order=${state.sort.sortOrder}`;
       }
       //Fetch data using api
       let resp = await fetch(apiUrl);
